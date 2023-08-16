@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="reloj">
+  <ClassDiagramComponents>
+    <Class name="Reloj" package="" visibility="public" xPosition="477.0" yPosition="43.0">
+      <Fields>
+        <Field name="dia" type="LocalDate" visibility="private"/>
+        <Field name="hora" type="LocalTime" visibility="private"/>
+        <Field name="modelo" type="String" visibility="private"/>
+        <Field name="numSerie" type="long" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getDia" returnType="void" visibility="public"/>
+        <Method name="getHora" returnType="void" visibility="public"/>
+        <Method name="incrementarDia" returnType="void" visibility="public"/>
+        <Method name="incrementarHora" returnType="void" visibility="public"/>
+        <Method name="limpiarPantalla" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="" visibility="public" xPosition="26.0" yPosition="35.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="altura" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="setEdad" returnType="void" visibility="public"/>
+        <Method name="getNombre" returnType="void" visibility="public"/>
+        <Method name="comer" returnType="void" visibility="public"/>
+        <Method name="hablar" returnType="void" visibility="public"/>
+        <Method name="getEdad" returnType="void" visibility="public"/>
+        <Method name="decirHora" returnType="void" visibility="public">
+          <Argument type="Reloj" name="r1"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RelojFit" package="" visibility="public" xPosition="449.0" yPosition="416.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="cuentaPasos" returnType="void" visibility="public">
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y"/>
+        </Method>
+        <Method name="frecuenciaAleatoria" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="usa" source="Persona" target="Reloj" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="RelojFit" target="Reloj"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
