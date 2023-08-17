@@ -31,23 +31,28 @@ public Reloj(String modelo, long numSerie){
     }
 
     public void incrementarDia(int n){
-        dia.plusDays(n);
+        LocalDate sumar =dia.plusDays(n);
+        dia=sumar;
         System.out.println("incrementando dia: "+getDia()+"/"+dia.getMonth() );   
     }
     
      public void restarDia(int n){
-        dia.minusDays(n);
-        System.out.println("restando dia: "+getDia()+"/"+dia.getMonth() );   
+         LocalDate resta = dia.minusDays(n);
+         dia=resta;
+
+        System.out.println("restando dia: "+getDia()+"/"+dia.getMonth() );
     }
     
     
     public void incrementarHora(int n){
-        hora.plusHours(n);
+        LocalTime suma= hora.plusHours(n);
+        hora=suma;
         System.out.println("incrementando hora: "+n+" hs, hora actual:"+getHora());
         ; 
     }
       public void restarHora(int n){
-        hora.minusHours(n);
+          LocalTime restar= hora.minusHours(n);
+          hora= restar;
         System.out.println("restando hora: "+n+" hs, hora actual:"+getHora());
         ; 
     }

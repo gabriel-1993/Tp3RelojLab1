@@ -8,15 +8,10 @@ import java.util.Random;
 
 public class RelojFit extends Reloj {
     
-    private int x;
-    private int y;
     
-    
-
-    public RelojFit(String modelo, long numSerie,int x,int y){
+    public RelojFit(String modelo, long numSerie){
         super( modelo, numSerie);
-        this.x=x;
-        this.y=y;
+        
     }
     
     public void cuentaPasos(int x,int y){
