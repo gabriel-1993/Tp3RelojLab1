@@ -35,9 +35,12 @@
         <Method name="decirHora" returnType="void" visibility="public">
           <Argument type="Reloj" name="r1"/>
         </Method>
+        <Method name="usarReloj" returnType="void" visibility="public">
+          <Argument type="RelojFit" name="r"/>
+        </Method>
       </Methods>
     </Class>
-    <Class name="RelojFit" package="" visibility="public" xPosition="449.0" yPosition="416.0">
+    <Class name="RelojFit" package="" visibility="public" xPosition="463.0" yPosition="417.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -50,7 +53,7 @@
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <UseRelation name="usa" source="Persona" target="Reloj" sourceCardinality="1..1" targetCardinality="1..1"/>
     <IsRelation name="is" source="RelojFit" target="Reloj"/>
+    <UseRelation name="usa" source="Persona" target="Reloj" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>
