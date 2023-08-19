@@ -53,60 +53,94 @@ public class Persona {
             Scanner leer = new Scanner(System.in);
             System.out.println("Elija una opcion");
             System.out.println("1 salir");
-            System.out.println("2 Restar dia");
+            System.out.println("2 Mostrar Hora");
             System.out.println("3 Incrementar Hora");
             System.out.println("4 Restar Hora");
-            System.out.println("5 Mostrar Dia");
-            System.out.println("6 Mostrar Hora");
-            System.out.println("7 Limpiar pantalla");
-            System.out.println("8 Incrementar dia");
-              if (r1 instanceof RelojFit && resp!=1) {
-                System.out.println("9 cuenta pasos");
-                System.out.println("10 frecuencia");
+            System.out.println("5 Incrementar Minutos");
+            System.out.println("6 Restar Minutos ");
+            System.out.println("7 Incrementar Segundos");
+            System.out.println("8 Restar Segundos");
+            System.out.println("9 Incrementar Anio");
+            System.out.println("10 Restar Anio");
+            System.out.println("11 Incrementar Mes");
+            System.out.println("12 Restar Mes");
+            System.out.println("13 Incrementar Dia");
+            System.out.println("14 Restar Dia");
+           
+            if (r1 instanceof RelojFit && resp != 1) {
+                System.out.println("15 cuenta pasos");
+                System.out.println("16 frecuencia");
             }
             resp = leer.nextInt();
-          
-            int cant;
 
             switch (resp) {
                 case 1:
                     System.out.println("Hasta luego =) ");
                     break;
                 case 2:
-                    System.out.println("Ingrese la cantidad de dias a restar");
-                    r1.restarDia(leer.nextInt());
+                    this.decirHora(r1);
                     break;
+
                 case 3:
                     System.out.println("Ingrese la cantidad de hs a incrementar");
-                    cant = leer.nextInt();
-                    r1.incrementarHora(cant);
+                    r1.incrementarHora(leer.nextInt());
+                    this.decirHora(r1);
                     break;
                 case 4:
                     System.out.println("Ingrese la cantidad de hs a restar");
-                    cant = leer.nextInt();
-                    r1.restarHora(cant);
+                    r1.restarHora(leer.nextInt());
+                    this.decirHora(r1);
                     break;
                 case 5:
-                    System.out.println("Dia: "+r1.getDia());
+                    System.out.println("Ingrese la cantidad de minutos a incrementar");
+                    r1.incrementarMinutos(leer.nextInt());
+                    this.decirHora(r1);
                     break;
                 case 6:
+                    System.out.println("Ingrese la cantidad de minutos a restar");
+                    r1.restarMinutos(leer.nextInt());
                     this.decirHora(r1);
                     break;
                 case 7:
-                    System.out.println("Nose como limpiar pantalla");
+                    System.out.println("Ingrese la cantidad de segundos a incrementar");
+                    r1.incrementarSegundos(leer.nextInt());
+                    this.decirHora(r1);
                     break;
                 case 8:
-                     System.out.println("Ingrese la cantidad de dias a incrementar");
-                    cant = leer.nextInt();
-                    r1.incrementarDia(cant);
+                    System.out.println("Ingrese la cantidad de segundos a restas");
+                    r1.restarSegundos(leer.nextInt());
+                    this.decirHora(r1);
                     break;
                 case 9:
-                    System.out.println("ingrese num entero para X luego para Y");
-                    r1.cuentaPasos(leer.nextInt(), leer.nextInt());
+                    System.out.println("ingrese la cantidad a incrementar en anio");
+                    r1.incrementarAnio(leer.nextInt());
+                    System.out.println("Fecha actualizada : " + r1.getDia());
                     break;
                 case 10:
-                    r1.frecuenciaAleatoria();
+                    System.out.println("ingrese la cantidad a restar en anio");
+                    r1.restarAnio(leer.nextInt());
+                    System.out.println("Fecha actualizada : " + r1.getDia());
                     break;
+                 case 11:
+                    System.out.println("ingrese la cantidad a incrementar en mes");
+                    r1.incrementarMes(leer.nextInt());
+                    System.out.println("Fecha actualizada : " + r1.getDia());
+                    break;  
+                case 12:
+                    System.out.println("ingrese la cantidad a restar en mes");
+                    r1.restarMes(leer.nextInt());
+                    System.out.println("Fecha actualizada : " + r1.getDia());
+                    break;      
+                case 13:
+                    System.out.println("ingrese la cantidad a incrementar en dia");
+                    r1.incrementarDia(leer.nextInt());
+                    System.out.println("Fecha actualizada : " + r1.getDia());
+                    break;    
+                case 14:
+                    System.out.println("ingrese la cantidad a restar en dia");
+                    r1.restarDia(leer.nextInt());
+                    System.out.println("Fecha actualizada : " + r1.getDia());
+                    break;       
                 default:
                     break;
             }
